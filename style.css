@@ -7,8 +7,13 @@
 
 html {
 	font-size: 16px;
-	background-color: #201e2f;
+	background-color: #0d1117;
 	color: white;
+}
+
+h2 {
+	text-transform: capitaklize;
+	font-size: 0.85rem;
 }
 
 h1,
@@ -20,9 +25,11 @@ h6 {
 	font-family: 'Ruda', Sans-Serif;
 }
 
+a,
 p {
 	font-family: 'Roboto Slab', Serif;
-	font-size: 16px;
+	font-size: 0.82rem;
+	color: #8b949e;
 }
 
 /* --- Header --- */
@@ -30,10 +37,9 @@ p {
 header {
 	width: 100%;
 	position: relative;
-	height: 68px;
-	border-bottom: 1px solid rgba(238, 238, 238, 0.2);
+	height: 58px;
 	z-index: 10;
-	background-color: rgba(13, 17, 37, 0.93);
+	background-color: #161b22;
 	justify-content: space-around;
 	display: flex;
 	align-items: center;
@@ -42,10 +48,99 @@ header {
 a {
 	color: white;
 	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 0.85rem;
+}
+
+header .menu {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	overflow: hidden;
+}
+
+header .container {
+	display: grid;
+	grid-template-columns: repeat(12, minmax(10px, 20px));
+	width: 30%;
+	/* background-color: pink; */
+}
+
+.container div {
+	background-color: white;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.circle {
+	z-index: 1;
+	opacity: 0.1;
+	grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.circle2 {
+	z-index: 2;
+	opacity: 0.2;
+	grid-area: 1 / 2 / span 1 / span 2;
+}
+
+.circle3 {
+	z-index: 2;
+	opacity: 0.4;
+	grid-area: 1 / 3 / span 1 / span 2;
+}
+
+.circle4 {
+	z-index: 2;
+	opacity: 0.6;
+	grid-area: 1 / 4 / span 1 / span 2;
+}
+
+.circle5 {
+	z-index: 2;
+	opacity: 0.8;
+	grid-area: 1 / 5 / span 1 / span 2;
+}
+
+.circle6 {
+	z-index: 2;
+	opacity: 1;
+	grid-area: 1 / 6 / span 1 / span 2;
 }
 
 a:hover {
 	color: grey;
+}
+
+/* Sections */
+
+main {
+	display: grid;
+}
+
+section {
+	margin: 1.5rem 1.5rem;
+	max-width: 800px;
+	padding: 1rem;
+	border: 1px solid#30363d;
+	border-radius: 6px;
+	display: grid;
+	justify-self: center;
+	align-self: center;
+	width: 80%;
+	max-width: 700px;
+}
+
+section div {
+	margin: 1rem 1rem;
+
+	justify-self: center;
+}
+
+section div div {
+	margin: 0rem 0rem;
 }
 
 /* Transition1 */
@@ -213,6 +308,90 @@ a:hover {
 	}
 	100% {
 		transform: translateX(100%);
+		background-color: yellowgreen;
+	}
+}
+
+/* Animation4 */
+.parent8 {
+	background-color: hsla(200, 100%, 20%);
+	height: 200px;
+	width: 200px;
+}
+
+.child8 {
+	background-color: red;
+	height: 50%;
+	width: 50%;
+	transition: transform 1s ease-in;
+	animation: around 1s ease-in forwards infinite;
+}
+
+.parent8:hover .child8 {
+	animation-play-state: paused;
+}
+
+@keyframes around {
+	0% {
+		transform: translateX(0%);
+		background-color: red;
+	}
+	25% {
+		transform: translateY(100%);
+		background-color: orange;
+	}
+	50% {
+		transform: translateY(100%) translateX(100%);
+		background-color: yellow;
+	}
+	75% {
+		transform: translateY(0%) translateX(100%);
+		background-color: yellow;
+	}
+	100% {
+		transform: translateX(0%);
+		background-color: yellowgreen;
+	}
+}
+
+/* Animation5 */
+.parent9 {
+	background-color: hsla(200, 100%, 20%);
+	height: 200px;
+	width: 200px;
+}
+
+.child9 {
+	background-color: red;
+	height: 50%;
+	width: 50%;
+	transition: transform 1s ease-in;
+	animation: diagonal 1s ease-in forwards infinite;
+}
+
+.parent9:hover .child9 {
+	animation-play-state: paused;
+}
+
+@keyframes diagonal {
+	0% {
+		transform: translateX(0%);
+		background-color: red;
+	}
+	25% {
+		transform: translateY(100%) translateX(100%);
+		background-color: orange;
+	}
+	50% {
+		transform: translateY(0%) translateX(100%);
+		background-color: yellow;
+	}
+	75% {
+		transform: translateY(100%) translateX(0%);
+		background-color: yellow;
+	}
+	100% {
+		transform: translateX(0%);
 		background-color: yellowgreen;
 	}
 }
