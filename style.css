@@ -32,6 +32,16 @@ p {
 	color: #8b949e;
 }
 
+.code {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 0.8rem;
+	color: white;
+	background-color: #161b22;
+	padding: 0.5rem;
+	width: 100%;
+	margin: 1rem 3rem;
+}
+
 /* --- Header --- */
 
 header {
@@ -64,7 +74,6 @@ header .container {
 	display: grid;
 	grid-template-columns: repeat(12, minmax(10px, 20px));
 	width: 30%;
-	/* background-color: pink; */
 }
 
 .container div {

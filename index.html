@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href='./style.css' type="text/css" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 		<title>Animations & Transitions CSS</title>
 	</head>
 	<body>
@@ -33,15 +35,20 @@
                <div class="parent">
                    <div class="child"></div>
                </div>
+               <div class="code">
+                   .child {<br>&nbsp&nbsptransition: 1s ease-in-out;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbsptransform: translateX(100%);<br>}
+                </div>
            </section>
 
            <section>
             <h2>Transition 2 </h2>
-            <p>Ease-In-Out - Left to Right - 1s - Color</p>
-          
+            <p>Ease-In-Out - Left to Right - 1s - Color</p>        
             <div class="parent2">
                 <div class="child2"></div>
             </div>
+             <div class="code">
+                   .child {<br>&nbsp&nbsptransition: 1s ease-in-out;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbsptransform: translateX(100%);<br>&nbsp&nbspbackground-color: green;<br>}
+                </div>
         </section>
 
         <section>
@@ -51,6 +58,9 @@
             <div class="parent3">
                 <div class="child3"></div>
             </div>
+             <div class="code">
+                   .child {<br>&nbsp&nbsptransition: transform 1s linear;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbsptransform: translateX(100%);<br>}
+                </div>
         </section>
 
         <section>
@@ -60,6 +70,9 @@
             <div class="parent4">
                 <div class="child4"></div>
             </div>
+             <div class="code">
+                   .child {<br>&nbsp&nbsptransition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);<br>}<br><br>.parent:hover .child {<br>&nbsp&nbsptransform: translateX(100%);<br>}
+                </div>
         </section>
 
         <section>
@@ -69,6 +82,12 @@
             <div class="parent5">
                 <div class="child5"></div>
             </div>
+            <div class="code">
+                .child {<br>&nbsp&nbsptransition: transform 1s ease-in;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbspanimation: left-to-right 1s ease-in forwards;<br>}
+                <br><br>@keyframes left-to-right {
+                    <br>&nbsp&nbsp100% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(100%);<br>&nbsp&nbsp}<br>
+                }
+         </div>
         </section>
 
         <section>
@@ -78,6 +97,15 @@
             <div class="parent6">
                 <div class="child6"></div>
             </div>
+            <div class="code">
+                .child {<br>&nbsp&nbspanimation: left-to-right-step 1s ease-in forwards infinite alternate;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbspanimation-play-state: paused;<br>}
+                <br><br>@keyframes left-to-right-step {
+                    <br>&nbsp&nbsp0% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp33% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%);<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp66% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%) translateX(100%);<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp100% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(100%);<br>&nbsp&nbsp}<br>
+                }
+         </div>
         </section>
 
         <section>
@@ -87,6 +115,15 @@
             <div class="parent7">
                 <div class="child7"></div>
             </div>
+            <div class="code">
+                .child {<br>&nbsp&nbspanimation: left-to-right-color 1s ease-in forwards infinite alternate;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbspanimation-play-state: paused;<br>}
+                <br><br>@keyframes left-to-right-color {
+                    <br>&nbsp&nbsp0% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: red;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp33% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: orange;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp66% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%) translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellow;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp100% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellowgreen;<br>&nbsp&nbsp}<br>
+                }
+         </div>
         </section>
 
         <section>
@@ -96,6 +133,16 @@
             <div class="parent8">
                 <div class="child8"></div>
             </div>
+            <div class="code">
+                .child {<br>&nbsp&nbspanimation: around 1s ease-in forwards infinite;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbspanimation-play-state: paused;<br>}
+                <br><br>@keyframes around {
+                    <br>&nbsp&nbsp0% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: red;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp25% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: orange;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp50% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%) translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellow;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp75% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(0%) translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellow;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp100% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellowgreen;<br>&nbsp&nbsp}<br>
+                }
+         </div>
         </section>
 
         <section>
@@ -105,6 +152,16 @@
             <div class="parent9">
                 <div class="child9"></div>
             </div>
+            <div class="code">
+                .child {<br>&nbsp&nbspanimation: diagonal 1s ease-in forwards infinite;<br>}<br><br>.parent:hover .child {<br>&nbsp&nbspanimation-play-state: paused;<br>}
+                <br><br>@keyframes diagonal {
+                    <br>&nbsp&nbsp0% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: red;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp25% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%) translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: orange;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp50% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(0%) translateX(100%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellow;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp75% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateY(100%) translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellow;<br>&nbsp&nbsp}<br>
+                    <br>&nbsp&nbsp100% {<br>&nbsp&nbsp&nbsp&nbsptransform: translateX(0%);<br>&nbsp&nbsp&nbsp&nbspbackground-color: yellowgreen;<br>&nbsp&nbsp}<br>
+                }
+         </div>
         </section>
 
        </main>
