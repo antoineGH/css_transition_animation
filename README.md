@@ -13,7 +13,7 @@ This project demonstrate how to use Multi-Step Animations and Transitions in CSS
 
 ## Screenshots
 
-![Animation Screenshot](https://templars.guru/app/github/css_transition_animation/screenshot_1.PNG)
+![Animation Screenshot](https://github.com/antoineratat/github_docs/blob/main/css_transition_animation/screenshot_1.PNG?raw=true)
 
 ## Technologies
 
